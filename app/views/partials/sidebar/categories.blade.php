@@ -1,0 +1,37 @@
+ {{HTML::style("//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")}}
+ {{HTML::style("css/sidebar.css")}}
+ {{HTML::script("//code.jquery.com/jquery-1.10.2.js")}}
+ {{HTML::script("//code.jquery.com/ui/1.10.4/jquery-ui.js")}}
+ <style>
+ 	.ui-menu { width: 150px; }
+ </style>
+
+ <div class="sidebar-nav">
+ 	<div class="navbar navbar-default" role="navigation">
+ 		<div class="navbar-header">
+ 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+ 				<span class="sr-only">Toggle navigation</span>
+ 				<span class="icon-bar"></span>
+ 				<span class="icon-bar"></span>
+ 				<span class="icon-bar"></span>
+ 			</button>
+ 			<span class="visible-xs navbar-brand">Sidebar menu</span>
+ 		</div>
+ 		<div class="navbar-collapse collapse sidebar-navbar-collapse">
+ 		{{$sideNav}}
+ 		</div>
+ 	</div>
+ </div>
+
+ <script type="text/javascript">
+ 	// $(function() {
+ 	// 	$( "#menu" ).menu();
+ 	// });
+
+ (function ($) {
+ 	$(function() {
+ 		// $( "#menu" ).menu();
+ 		$( ".navmenu" ).menu();
+ 	});
+ }(jQuery));
+</script>

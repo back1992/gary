@@ -1,0 +1,14 @@
+<?php namespace App\Modules\Navmenu\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+class NavmenuFacade extends Facade {
+
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor() { return new \App\Modules\Navmenu\Models\Navmenu; }
+
+}

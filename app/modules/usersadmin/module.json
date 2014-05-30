@@ -1,0 +1,7 @@
+{
+	"enabled":  true,
+	"include": [
+		"breadcrumbs.php"
+	],
+	"seeder": "App\\Modules\\Rolesadmin\\Seeds\\RolesTableSeeder"
+}

@@ -56,7 +56,7 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			// 'database'  => 'modules',
-			'database'  => 'module3',
+			'database'  => 'gary3',
 			'username'  => 'root',
 			'password'  => '123456',
 			'charset'   => 'utf8',

@@ -30,15 +30,15 @@ class EntrustSetupTables extends Migration {
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
         });
         // Creates the assigned_roles (Many-to-Many relation) table
-        Schema::create('assigned_menu', function($table)
-        {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->integer('navmenu_id')->unsigned()->index();
-            $table->integer('role_id')->unsigned()->index();
-            $table->foreign('navmenu_id')->references('id')->on('navmenus')->onDelete('cascade');
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
-        });
+        // Schema::create('assigned_menu', function($table)
+        // {
+        //     $table->engine = 'InnoDB';
+        //     $table->increments('id');
+        //     $table->integer('navmenu_id')->unsigned()->index();
+        //     $table->integer('role_id')->unsigned()->index();
+        //     $table->foreign('navmenu_id')->references('id')->on('navmenus')->onDelete('cascade');
+        //     $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+        // });
     }
 
     /**

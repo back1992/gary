@@ -39,8 +39,8 @@ class RobotController extends \BaseController {
      */
     public function getIndex()
     {
-     if(function_exists('curl_init'))
-     {
+       if(function_exists('curl_init'))
+       {
 // set cURL resource
         // $curl = curl_init('http://www.google.com.hk');
         $curl = curl_init('http://www.baidu.com');
@@ -479,4 +479,88 @@ class RobotController extends \BaseController {
         }
         return $redirect;
     }
+
+    /**
+     * Process a dumb redirect.
+     * @param $url1
+     * @param $url2
+     * @param $url3
+     * @return string
+     */
+    public function translate($url1,$url2,$url3)
+    {
+        $redirect = '';
+        if( ! empty( $url1 ) )
+        {
+            $redirect = $url1;
+            $redirect .= (empty($url2)? '' : '/' . $url2);
+            $redirect .= (empty($url3)? '' : '/' . $url3);
+        }
+        return $redirect;
+    }
+
+
+
+    function curlTranslate($word,$conversion = 'hi_to_en')
+    {
+        $word = urlencode($word);
+// dutch to english
+        if($conversion == 'nl_to_en')
+            $url = 'http://translate.google.com/translate_a/t?client=t&text='.$word.'&hl=en&sl=nl&tl=en&multires=1&otf=2&pc=1&ssel=0&tsel=0&sc=1';
+
+// english to hindi
+        if($conversion == 'en_to_hi')
+            $url = 'http://translate.google.com/translate_a/t?client=t&text='.$word.'&hl=en&sl=en&tl=hi&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=3&tsel=3&sc=1';
+
+// hindi to english
+        if($conversion == 'hi_to_en')
+            $url = 'http://translate.google.com/translate_a/t?client=t&text='.$word.'&hl=en&sl=hi&tl=en&ie=UTF-8&oe=UTF-8&multires=1&otf=1&pc=1&trs=1&ssel=3&tsel=6&sc=1';
+
+//$url = 'http://translate.google.com/translate_a/t?client=t&text='.$word.'&hl=en&sl=nl&tl=en&multires=1&otf=2&pc=1&ssel=0&tsel=0&sc=1';
+
+        $name_en = curlGoogle($url);
+
+        $name_en = explode('"',$name_en);
+        return  $name_en[1];
+    }
+
+    public function curlTranslateAny($word,$conversion = 'hi_to_en')
+    {
+        $word = urlencode($word);
+        $arr_langs = explode(‘_to_’, $conversion);
+        $url = "http://translate.google.com/translate_a/t?client=t&text=$word&hl=".$arr_langs[1]."&sl=".$arr_langs[0]."&tl=".$arr_langs[1]."&ie=UTF-8&oe=UTF-8&multires=1&otf=1&pc=1&trs=1&ssel=3&tsel=6&sc=1";
+
+        $name_en = curlGoogle($url);
+
+        $name_en = explode('"',$name_en);
+        return  $name_en[1];
+    }
+
+    public function getPdf()
+    {
+
+      $html = '<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+    <p style="font-family: firefly, verdana, sans-serif;">dfsgdfsgdfs献给母亲的爱dfsgdfs</p>
+</body>
+</html>';
+
+      $pdf = \App::make('dompdf');
+      $pdf->SetFont('stsongstdlight', '', 8);  
+      // $pdf->loadHTML("11111111111111111111111");
+      // return $pdf->stream();
+
+      // $html = View::make('robot::index', compact('html'))->render();
+      $pdf->loadHTML($html, 'UTF-8');
+      return $pdf->stream();
+
+
+      $pdf_obj = new \DOMPDF();
+      $pdf_obj->load_html($html, 'UTF-8');
+      $pdf_obj->render();
+      return  $pdf_obj->stream('test_pdf.pdf');
+  }
 }

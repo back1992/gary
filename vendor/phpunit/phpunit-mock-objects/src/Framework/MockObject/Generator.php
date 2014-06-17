@@ -268,9 +268,19 @@ class PHPUnit_Framework_MockObject_Generator
                 $object = $class->newInstanceArgs($arguments);
             }
         } else {
-            $class = new ReflectionClass($className);
+            $class = new ReflectionClass('ReflectionClass');
+            $hasNewInstanceWithoutConstructor = $class->hasMethod('newInstanceWithoutConstructor');;
 
-            if ($this->isInternalClass($class) || version_compare(PHP_VERSION, '5.4.0', '<')) {
+            $class      = new ReflectionClass($className);
+            $isInternal = $this->isInternalClass($class);
+
+            if ($isInternal && !$this->unserializeHackIsSupported()) {
+                throw new PHPUnit_Framework_MockObject_RuntimeException(
+                    'Internal classes cannot be mocked without invoking their constructor in PHP ' . PHP_VERSION
+                );
+            }
+
+            if ($isInternal || !$hasNewInstanceWithoutConstructor) {
                 $object = unserialize(
                     sprintf('O:%d:"%s":0:{}', strlen($className), $className)
                 );
@@ -1086,5 +1096,19 @@ class PHPUnit_Framework_MockObject_Generator
         }
 
         return false;
+    }
+
+    /**
+     * @return boolean
+     * @since  Method available since Release 2.0.9
+     */
+    private function unserializeHackIsSupported()
+    {
+        if (PHP_VERSION == '5.4.29' || PHP_VERSION == '5.5.13' ||
+            version_compare(PHP_VERSION, '5.6.0', '>=')) {
+            return FALSE;
+        }
+
+        return TRUE;
     }
 }

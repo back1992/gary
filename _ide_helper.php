@@ -13067,6 +13067,153 @@ namespace {
 		 }
 
 	}
+	class PDF extends \Barryvdh\DomPDF\Facade{
+		/**
+		 * 
+		 *
+		 * @static 
+		 */
+		 public static function __construct(){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			 \Barryvdh\DomPDF\PDF::__construct();
+		 }
+
+		/**
+		 * Get the DomPDF instance
+		 *
+		 * @return \DOMPDF
+		 * @static 
+		 */
+		 public static function getDomPDF(){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::getDomPDF();
+		 }
+
+		/**
+		 * Set the paper size (default A4)
+		 *
+		 * @param string $paper
+		 * @param string $orientation
+		 * @return $this
+		 * @static 
+		 */
+		 public static function setPaper($paper, $orientation = null){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::setPaper($paper, $orientation);
+		 }
+
+		/**
+		 * Set the orientation (default portrait)
+		 *
+		 * @param string $orientation
+		 * @return static
+		 * @static 
+		 */
+		 public static function setOrientation($orientation){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::setOrientation($orientation);
+		 }
+
+		/**
+		 * Show or hide warnings
+		 *
+		 * @param bool $warnings
+		 * @return $this
+		 * @static 
+		 */
+		 public static function setWarnings($warnings){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::setWarnings($warnings);
+		 }
+
+		/**
+		 * Load a HTML string
+		 *
+		 * @param string $string
+		 * @param string $encoding Not used yet
+		 * @return static
+		 * @static 
+		 */
+		 public static function loadHTML($string, $encoding = null){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::loadHTML($string, $encoding);
+		 }
+
+		/**
+		 * Load a HTML file
+		 *
+		 * @param string $file
+		 * @return static
+		 * @static 
+		 */
+		 public static function loadFile($file){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::loadFile($file);
+		 }
+
+		/**
+		 * Load a View and convert to HTML
+		 *
+		 * @param string $view
+		 * @param array $data
+		 * @param array $mergeData
+		 * @param string $encoding Not used yet
+		 * @return static
+		 * @static 
+		 */
+		 public static function loadView($view, $data = array(), $mergeData = array(), $encoding = null){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::loadView($view, $data, $mergeData, $encoding);
+		 }
+
+		/**
+		 * Output the PDF as a string.
+		 *
+		 * @return string The rendered PDF as string
+		 * @static 
+		 */
+		 public static function output(){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::output();
+		 }
+
+		/**
+		 * Save the PDF to a file
+		 *
+		 * @param $filename
+		 * @return static
+		 * @static 
+		 */
+		 public static function save($filename){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::save($filename);
+		 }
+
+		/**
+		 * Make the PDF downloadable by the user
+		 *
+		 * @param string $filename
+		 * @return \Symfony\Component\HttpFoundation\Response
+		 * @static 
+		 */
+		 public static function download($filename = 'document.pdf'){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::download($filename);
+		 }
+
+		/**
+		 * Return a response with the PDF to show in the browser
+		 *
+		 * @param string $filename
+		 * @return \Symfony\Component\HttpFoundation\Response
+		 * @static 
+		 */
+		 public static function stream($filename = 'document.pdf'){
+			//Method inherited from \Barryvdh\DomPDF\PDF
+			return \Barryvdh\DomPDF\PDF::stream($filename);
+		 }
+
+	}
 	class Iseed extends \Orangehill\Iseed\Facades\Iseed{
 		/**
 		 * 

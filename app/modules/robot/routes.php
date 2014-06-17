@@ -16,5 +16,6 @@ Route::group(array('prefix' => 'robot'), function()
    Route::post('settings',  array('as' => 'robot.settings',      'uses' => 'App\Modules\Robot\Controllers\RobotController@postSettings'));
    Route::get('/logout',  array('as' => 'robot.logout',      'uses' => 'App\Modules\Robot\Controllers\RobotController@getLogout'));
    Route::get('/create',  array('as' => 'robot.create',      'uses' => 'App\Modules\Robot\Controllers\RobotController@getCreate'));
+   Route::get('/pdf',  array('as' => 'robot.pdf',      'uses' => 'App\Modules\Robot\Controllers\RobotController@getPdf'));
 	
 });

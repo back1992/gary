@@ -131,6 +131,10 @@ return array(
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Zizaco\Confide\ConfideServiceProvider',
 		'Bllim\Datatables\DatatablesServiceProvider',
+
+		'Barryvdh\DomPDF\ServiceProvider',
+		//my package
+		'Daniel\Phptidy\PhptidyServiceProvider.php'
 		),
 
 	/*
@@ -204,6 +208,8 @@ return array(
 		'Datatables'      => 'Bllim\Datatables\Datatables',
 		'Confide'    => 'Zizaco\Confide\ConfideFacade',
 		'Entrust'    => 'Zizaco\Entrust\EntrustFacade',
+
+		'PDF' => 'Barryvdh\DomPDF\Facade',
 
 		),
 

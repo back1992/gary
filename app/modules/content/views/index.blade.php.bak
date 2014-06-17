@@ -2,7 +2,7 @@
 
 @section('main')
 	<div class="jumbotron">
-		<h1>一号车网 <small>后台管理系统</small></h1>
+		<h1>GARY <small>后台管理系统</small></h1>
 		<p class="lead">Menu management system, Roles management system.</p>
 		<p><a class="btn btn-lg btn-success" href="{{ route('page', 'contact') }}">Contact us</a></p>
 	</div>

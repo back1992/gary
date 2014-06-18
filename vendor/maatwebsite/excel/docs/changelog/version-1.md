@@ -1,5 +1,14 @@
 # Version 1
 
+### 1.1.3
+
+- Cell writer `->setBorder()` fix
+
+### 1.1.2
+
+- Fix for multiple imports on one pageload
+- Multiple new import heading conversions (Config: excel::import.heading: true|false|slugged|ascii|numeric|hashed|trans|original)
+
 ### 1.1.1
 
 - Retrieve workbook and sheet title during import (`->getTitle()`)

@@ -733,21 +733,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
-<<<<<<< HEAD
-                "reference": "e5e0fea1f89c94ea5269f77efb7f3cf46fccd6a4"
+                "reference": "02e377783516b370b520b0e686b8b087340d480a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/e5e0fea1f89c94ea5269f77efb7f3cf46fccd6a4",
-                "reference": "e5e0fea1f89c94ea5269f77efb7f3cf46fccd6a4",
-=======
-                "reference": "b0fa99f2af61325e4ebbccd65a0de3fc3f7327c2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/b0fa99f2af61325e4ebbccd65a0de3fc3f7327c2",
-                "reference": "b0fa99f2af61325e4ebbccd65a0de3fc3f7327c2",
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/02e377783516b370b520b0e686b8b087340d480a",
+                "reference": "02e377783516b370b520b0e686b8b087340d480a",
                 "shasum": ""
             },
             "require": {
@@ -789,11 +780,7 @@
                 "import",
                 "laravel"
             ],
-<<<<<<< HEAD
-            "time": "2014-06-12 19:17:30"
-=======
-            "time": "2014-06-07 17:30:07"
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
+            "time": "2014-06-17 21:15:55"
         },
         {
             "name": "monolog/monolog",
@@ -1006,16 +993,16 @@
         },
         {
             "name": "patchwork/utf8",
-            "version": "v1.1.23",
+            "version": "v1.1.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
-                "reference": "c1edbc82aed49ff2bdef0a0f659bf69e3f7b14cc"
+                "reference": "40f552c019956f446553b19f7de2da2f9c74d730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/c1edbc82aed49ff2bdef0a0f659bf69e3f7b14cc",
-                "reference": "c1edbc82aed49ff2bdef0a0f659bf69e3f7b14cc",
+                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/40f552c019956f446553b19f7de2da2f9c74d730",
+                "reference": "40f552c019956f446553b19f7de2da2f9c74d730",
                 "shasum": ""
             },
             "require": {
@@ -1053,8 +1040,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2014-05-22 13:59:09"
-<<<<<<< HEAD
+            "time": "2014-06-17 08:23:06"
         },
         {
             "name": "phenx/php-font-lib",
@@ -1089,8 +1075,6 @@
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
             "time": "2014-02-01 15:22:28"
-=======
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
         },
         {
             "name": "phpoffice/phpexcel",
@@ -2570,7 +2554,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -2626,7 +2610,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -2900,7 +2884,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -2919,7 +2903,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -3394,7 +3378,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
             "version": "4.1.3",
             "source": {
                 "type": "git",
@@ -3405,18 +3388,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/939cb801b3b2aa253aedd0b279f40bb8f35cec91",
                 "reference": "939cb801b3b2aa253aedd0b279f40bb8f35cec91",
-=======
-            "version": "4.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "be5f237df860da88a7cfe247594232cae61845df"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/be5f237df860da88a7cfe247594232cae61845df",
-                "reference": "be5f237df860da88a7cfe247594232cae61845df",
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
                 "shasum": ""
             },
             "require": {
@@ -3477,7 +3448,6 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2014-06-11 14:15:47"
         },
         {
@@ -3492,22 +3462,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/1a894a16b6c15fcdc5ef2b110f0e6233952c9b0f",
                 "reference": "1a894a16b6c15fcdc5ef2b110f0e6233952c9b0f",
-=======
-            "time": "2014-06-07 07:30:48"
-        },
-        {
-            "name": "phpunit/phpunit-mock-objects",
-            "version": "2.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "92f4b49d2cd4f2537db7ef969231f3d43c8da957"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/92f4b49d2cd4f2537db7ef969231f3d43c8da957",
-                "reference": "92f4b49d2cd4f2537db7ef969231f3d43c8da957",
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
                 "shasum": ""
             },
             "require": {
@@ -3551,11 +3505,7 @@
                 "mock",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2014-06-07 16:22:57"
-=======
-            "time": "2014-06-07 12:56:52"
->>>>>>> fdf0976211a4ccb937cf5f99687acbc4882cca69
         },
         {
             "name": "sebastian/comparator",

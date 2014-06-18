@@ -134,7 +134,7 @@ return array(
 
 		'Barryvdh\DomPDF\ServiceProvider',
 		//my package
-		'Daniel\Phptidy\PhptidyServiceProvider.php'
+		// 'Daniel\Phptidy\PhptidyServiceProvider.php'
 		),
 
 	/*

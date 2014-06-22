@@ -4105,5 +4105,47 @@
             "import",
             "laravel"
         ]
+    },
+    {
+        "name": "mysterier/Snoopy-1.2.4",
+        "version": "master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mysterier/Snoopy-1.2.4.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "punkave/phpQuery",
+        "version": "master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/punkave/phpQuery.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "phpclasses/multilang",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "dist": {
+            "type": "zip",
+            "url": "http://www.phpclasses.org/install/package/multilang.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "multilang.php"
+            ]
+        }
     }
 ]

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "44497f55f9fe0c8503e19d2fc8ca229b",
+    "hash": "00005208439053180e717f4d2fe6a8bc",
     "packages": [
         {
             "name": "anahkiasen/html-object",
@@ -851,6 +851,17 @@
             "time": "2014-06-04 16:30:04"
         },
         {
+            "name": "mysterier/Snoopy-1.2.4",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mysterier/Snoopy-1.2.4.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2013-04-01 09:18:40"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.9.0",
             "source": {
@@ -1075,6 +1086,22 @@
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
             "time": "2014-02-01 15:22:28"
+        },
+        {
+            "name": "phpclasses/multilang",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://www.phpclasses.org/install/package/multilang.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "multilang.php"
+                ]
+            }
         },
         {
             "name": "phpoffice/phpexcel",
@@ -1312,6 +1339,17 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "punkave/phpQuery",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/punkave/phpQuery.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "time": "2011-11-22 15:09:26"
         },
         {
             "name": "stack/builder",
@@ -3981,6 +4019,8 @@
         "laravelbook/ardent": 20,
         "maatwebsite/excel": 20,
         "orangehill/iseed": 20,
+        "mysterier/snoopy-1.2.4": 20,
+        "punkave/phpquery": 20,
         "clbustos/php_beautifier": 20,
         "itsgoingd/clockwork": 20
     },

@@ -132,7 +132,7 @@ return array(
 		'Zizaco\Confide\ConfideServiceProvider',
 		'Bllim\Datatables\DatatablesServiceProvider',
 
-		'Barryvdh\DomPDF\ServiceProvider',
+		// 'Barryvdh\DomPDF\ServiceProvider',
 		//my package
 		// 'Daniel\Phptidy\PhptidyServiceProvider.php'
 		),

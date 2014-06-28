@@ -58,7 +58,7 @@ return array(
 			// 'database'  => 'modules',
 			'database'  => 'gary',
 			'username'  => 'root',
-			'password'  => '123456',
+			'password'  => 'Joomla8',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

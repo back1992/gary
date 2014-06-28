@@ -11,4 +11,6 @@ return array(
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     $vendorDir . '/anahkiasen/underscore-php/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
+    $vendorDir . '/punkave/phpQuery/phpQuery/phpQuery.php',
+    $vendorDir . '/mysterier/Snoopy-1.2.4/Snoopy.class.php',
 );

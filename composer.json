@@ -43,7 +43,7 @@
         "packagist": false
     }],
     "require": {
-        "laravel/framework": "dev-master",
+        "laravel/framework": "4.1.*",
         "creolab/laravel-modules": "dev-master@dev",
         "fzaninotto/faker": "1.3.*",
         "vespakoen/menu": "dev-master",
@@ -54,11 +54,7 @@
         "maatwebsite/excel": "dev-master",
         "orangehill/iseed": "dev-master",
         "mysterier/Snoopy-1.2.4": "dev-master",
-        "punkave/phpQuery": "dev-master",
-        "barryvdh/laravel-dompdf": "*",
-        "dompdf/dompdf": "0.6.*",
-        "clbustos/PHP_Beautifier": "dev-master",
-        "phpclasses/multilang": ">=1.0.0"
+        "punkave/phpQuery": "dev-master"
     },
     "require-dev": {
         "itsgoingd/clockwork": "dev-master",

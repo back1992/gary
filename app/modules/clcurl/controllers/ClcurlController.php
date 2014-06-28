@@ -8,8 +8,6 @@ use App\Modules\Clcurl\Models\Pdf;
 class ClcurlController extends \BaseController
 {
     // public $restful = true;
-    
-    
     /**
      * User Model
      * @var User
@@ -40,94 +38,39 @@ class ClcurlController extends \BaseController
         dd($tidy->greeting());
         return View::make('clcurl::index', compact('user'));
     }
-    /**
-     * [readPdf description]
-     * @param  [type] $file [description]
-     * @return [type]       [description]
-     */
-    public function readPdf($file = null) {
-        $file = public_path('example1.pdf'); // <- Replace with the path to your .pdf file
-        if (file_exists($file)) {
-            $content = file_get_contents($file);
-            $object = new \TChester_Pdf2Text($file);
-        }
-        return View::make('clcurl::index', compact('object'));
-    }
-    public function readText($file = null) {
-        $file = public_path('example3.txt'); // <- Replace with the path to your .pdf file
-        if (file_exists($file)) {
-            $content = file_get_contents($file);
-            dd($content);
-        }
-        return View::make('clcurl::index', compact('object'));
-    }
-
-    public function pdf2text($file = null) {
-        // Show the page
-        // $file = 'contract01.pdf'; // <- Replace with the path to your .pdf file
-        // $file = public_path('contract01.pdf'); // <- Replace with the path to your .pdf file
-        $file = public_path('Joomla3DevelopmentCookbook.pdf'); // <- Replace with the path to your .pdf file
-        // check if the file exists
-        // $text = Clcurl::pdf2text($file);
-        $output = shell_exec('pdftotext ./public/Joomla3DevelopmentCookbook.pdf  ./public/example3.txt');
-        dd($output);
-        echo "<pre>$output</pre>";
-        return View::make('clcurl::index', compact('user'));
-    }
-    public function pdf2html($file = null) {
-        // Show the page
-        // $file = 'contract01.pdf'; // <- Replace with the path to your .pdf file
-        // $file = public_path('contract01.pdf'); // <- Replace with the path to your .pdf file
-        $file = public_path('example1.pdf'); // <- Replace with the path to your .pdf file
-        // check if the file exists
-        // $text = Clcurl::pdf2text($file);
-        //        $output = \Mgufrone\Pdf2Htm\PdfToHtm($file);
-        // echo "<pre>$output</pre>";
-        //         return View::make('clcurl::index', compact('user'));
-        
-        $pdf = new \Gufy\Pdf2Html\PdfToHtml();
-        // $pdf = new \PdfToHtml();
-        // opening file
-        $pdf->open($file);
-        // set different output directory for generated html files
-        $pdf->setOutputDirectory('example1.html');
-        // do this if you want to convert in the same directory as file.pdf
-        $pdf->generate();
-    }
     public function phpinfo() {
         phpinfo();
     }
     public function getSnoopy() {
         $snoopy = new \Snoopy;
-        // $snoopy->fetchtext("http://www.php.net/");
-        // print $snoopy->results;
-        
-        // $snoopy->fetchlinks("http://www.phpbuilder.com/");
-        // print_r($snoopy->results);
-        
-        /*        $submit_url = "http://www.google.com";
-              
-                    $submit_vars["q"] = "amiga";
-                    $submit_vars["submit"] = "Search!";
-                    $submit_vars["searchhost"] = "Altavista";
-                    
-                    $snoopy->submit($submit_url,$submit_vars);
-                    print_r($snoopy->results);*/
-        
-        $snoopy->fetchform("http://www.baidu.com");
-        print_r($snoopy->results);
+        $webUrl = 'http://www.gdqts.gov.cn/zjxx/jdcctb/zljd/';
+        $div = Clcurl::getDiv($webUrl, '.align_CT');
+        // dd($div);
+        $snoopy->fetchlinks($div); 
+        $url=array(); 
+        $url=$snoopy->results; 
+        // $links = $snoopy->fetchlinks($url) ->results;
+        foreach ($url as $key => $value) {
+            # code...
+            echo "<PRE>\n";
+            echo htmlentities($value); 
+            echo "</PRE>\n";
+        }
+        // print_r($url);
     }
-    
     public function getQuery() {
         // code...
-        \phpQuery::browserGet('http://www.google.com/', 'success1');
-    }
-    function success1($browser) {
-        $browser->WebBrowser('success2')->find('input[name=q]')->val('search phrase')->parents('form')->submit();
-    }
-    function success2($browser) {
-        print $browser;
-    }
+        \phpQuery::newDocumentFile('http://www.gdqts.gov.cn/zjxx/jdcctb/zljd/');  
+        // $companies = pq('.align_CT')->find('td');  
+        $companies = pq('.align_CT');  
+        echo $companies->text();
 
-
+                    // dd($companies->text());
+        // foreach($companies as $company)  
+        // {  
+        //                 // print_r(get_class_methods(pq($company)));
+        //     dd(pq($company)->find('.cn4')->text());
+        //     echo pq($company)->find('.cn4')->text()."<br>";  
+        // }
+    }
 }
